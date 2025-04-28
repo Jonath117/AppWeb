@@ -56,22 +56,22 @@ body {
 /* Estilo responsive para pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px;
+        padding: 1px;
     }
 
     .navbar-menu {
-        flex-direction: column; /* Cambia la dirección a vertical */
-        align-items: center;
+        /* Cambia la dirección a vertical */
+        align-items: right;
     }
 
     .navbar-menu li {
-        margin: 10px 0; /* Espaciado entre los elementos */
+        margin: 1px 0; /* Espaciado entre los elementos */
     }
 
     .navbar-menu a {
         margin-left: 0; /* Elimina el margen izquierdo */
-        padding: 10px 20px; /* Ajusta el padding */
-        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 1px 2px; /* Ajusta el padding */
+        width: 50%; /* Ocupa todo el ancho disponible */
         text-align: center; /* Centra el texto */
     }
 }
