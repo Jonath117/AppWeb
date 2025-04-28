@@ -7,7 +7,7 @@ Estructura del proyecto
 
 Se inicia con la creación de un prototipo visual en Figma, aplicando principios de diseño limpio y minimalista. 
 Posteriormente, se implementa el sitio usando exclusivamente HTML y CSS, respetando la separación de archivos, 
-la organización semántica del código, y asegurando una estructura responsiva y optimizada para buscadores (SEO).
+la organización semántica del código, y asegurando una estructura responsiva.
 
 Que se hace
 
