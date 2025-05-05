@@ -52,7 +52,7 @@
 }
 
 .footer-principal {
-    background-color: #1a1a1a;
+    background-color: gray;
     padding: 20px 0;
     width: 100%;
     position: fixed;
@@ -64,7 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 150px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -80,6 +80,17 @@
   .footer-principal__link:hover {
     color: #f39c12; /* Cambia según tu color de hover preferido */
   }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+  }
+  
+  .footer-principal__link:hover .icon {
+    transform: scale(1.2);
+  }
+  
   
 
 /* RESPONSIVE */
