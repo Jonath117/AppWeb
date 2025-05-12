@@ -1,36 +1,66 @@
 .presentacion-inicio {
+  text-align: left; 
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-  }
-  
-  .presentacion-inicio h1 {
-    font-size: 2.5em;
-    color: #3B82F6;
-    
-  }
-  
-  .presentacion-inicio p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 10px 0;
-  }
+.presentacion-inicio h1 {
+  text-align: left; 
+  font-size: 2.2em;
+  color: #333; 
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.texto {
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
 
 .link {
-    padding-top: 60px;
-    margin-left: 400px ;
+  margin-top: 40px;
+  text-align: center; 
 }
 
 .link a {
-    text-decoration: none;
-    color: #0078d7;
-    font-weight: bold;
+  text-decoration: none;
+  color: #0078d7;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.link a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #0078d7;
+  box-shadow: 0 4px 8px rgba(0, 120, 215, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .presentacion-inicio {
+    padding: 30px 15px;
+    margin: 20px 15px;
+    border-radius: 8px;
   }
   
-  .link a:hover {
-    text-decoration: underline;
-    color: #0056a3;
+  .presentacion-inicio h1 {
+    font-size: 2.2em;
   }
+  
+  .texto {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+  
+  .link {
+    margin-top: 30px;
+  }
+}
