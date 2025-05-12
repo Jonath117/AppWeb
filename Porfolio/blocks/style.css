@@ -1,0 +1,12 @@
+@import url('about-me/about-me.css');
+@import url('blogs/blogs.css');
+@import url('footer/footer.css');
+@import url('inicio/inicio.css');
+@import url('nav-bar/nav-bar.css');
+@import url('nav-bar-2/nav-bar-2.css');
+@import url('projects/projects.css');
+
+body {
+    margin: 0;
+    padding: 0;
+}

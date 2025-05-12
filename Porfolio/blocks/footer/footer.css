@@ -1,0 +1,54 @@
+.footer-principal__link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-principal__link:hover {
+    color: #f39c12; /* Cambia según tu color de hover preferido */
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+  }
+  
+  .footer-principal {
+    background-color: gray;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* RESPONSIVE */
+@media (max-width: 768px) {
+  .social-media {
+      margin-left: 0;
+      flex-direction: row;
+  }
+
+  .footer-principal__link{
+      display: flex;
+      place-items: center;
+      width: 100%;
+  }
+
+  .footer-principal__link {
+      width: 100%;
+  }
+  
+}

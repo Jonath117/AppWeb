@@ -1,0 +1,36 @@
+.presentacion-inicio {
+
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .presentacion-inicio h1 {
+    font-size: 2.5em;
+    color: #3B82F6;
+    
+  }
+  
+  .presentacion-inicio p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+
+.link {
+    padding-top: 60px;
+    margin-left: 400px ;
+}
+
+.link a {
+    text-decoration: none;
+    color: #0078d7;
+    font-weight: bold;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+    color: #0056a3;
+  }
