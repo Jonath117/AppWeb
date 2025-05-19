@@ -4,7 +4,7 @@
   font-family: 'Poppins', sans-serif;
   color: #333;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 116px auto;
 }
 
 .presentacion-inicio h1 {
@@ -24,7 +24,7 @@
 }
 
 .link {
-  margin-top: 40px;
+  margin: 200px;
   text-align: center; 
 }
 
@@ -34,6 +34,7 @@
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 6px;
+  font-size: 1.6em;
 }
 
 .link a:hover {

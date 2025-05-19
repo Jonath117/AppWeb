@@ -1,39 +1,47 @@
-.footer-principal__link {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-principal__link:hover {
-    color: #f39c12; /* Cambia según tu color de hover preferido */
-  }
+.footer {
+    background: #B0B0B0;
+    position: relative;
+    margin-top: 50px;
+}
 
-  .icon {
-    width: 32px;
-    height: 32px;
+.footer__content {
+    color: white;
+
+}
+
+.footer__social {
+    padding: 15px 30px;
+
+}
+
+.footer__social-heading {
+    
+
+} 
+
+.footer__social-icon {
+    width: 20px;
+    height: 20px;
     transition: transform 0.3s;
   }
-  
-  .footer-principal {
-    background-color: gray;
-    padding: 20px 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
+
+.footer__list {
+  display: flex;
+  padding: 0;
+
+}
+
+.footer__list-item {
+  padding-right: 60px;
     list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+
+}
+
+.footer__social-link {
+  color: white;
+  text-decoration: none;
+
+}
   /* RESPONSIVE */
 @media (max-width: 768px) {
   .social-media {
