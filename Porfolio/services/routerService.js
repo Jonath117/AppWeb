@@ -9,38 +9,43 @@ export const Router = {
     });
 
     window.addEventListener("popstate", (event) => {
-      Router.go(event.state.route, false);
+      Router.go(event.state?.route || "/", false);
     });
+
     Router.go(location.pathname);
   },
+
   go: (route, addToHistory = true) => {
     if (addToHistory) {
       history.pushState({ route }, "", route);
     }
-    let pageElement = null;
+
+    let file = null;
+
     switch (route) {
       case "/":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Home";
+        file = document.createElement("main");
+        file.textContent("Home");
         break;
-      case "/element":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Element 1";
+      case "/contacto":
+      case "/contacto.html":
+        file = document.createElement("main");
+        file.textContent("Contacto");
         break;
       default:
+        file = "/partials/404.html";
         break;
     }
-    if (pageElement) {
-      let currentPage = document.querySelector("main").firstElementChild;
-      if (currentPage) {
-        currentPage.remove();
-        document.querySelector("main").appendChild(pageElement);
-      } else {
-        document.querySelector("main").appendChild(pageElement);
-      }
-    }
 
-    window.scrollX = 0;
-    window.scrollY = 0;
+    fetch(file)
+      .then((res) => res.text())
+      .then((html) => {
+        const main = document.querySelector("main");
+        main.innerHTML = html;
+        window.scrollTo(0, 0);
+      })
+      .catch((err) => {
+        console.error("Error al cargar la página:", err);
+      });
   },
 };
