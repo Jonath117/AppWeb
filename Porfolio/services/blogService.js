@@ -12,9 +12,8 @@ export function initBlogEvents(){
         button.addEventListener("click", () => {
             button.classList.toggle("saved");
             button.innerHTML = `<img src="./assets/images/save.png" alt="Guardar" /> ${
-        button.classList.contains("saved") ? "Guardado" : "Guardar"
-      }`;
-      console.log("$ Guardado");
+            button.classList.contains("saved") ? "Guardado" : "Guardar"
+            }`;
         });
     });
 }

@@ -1,4 +1,4 @@
-export const Router = {
+const Router = {
   init: () => {
     document.querySelectorAll("a.navbar-principal__link").forEach((a) => {
       a.addEventListener("click", (event) => {
@@ -7,11 +7,9 @@ export const Router = {
         Router.go(href);
       });
     });
-
     window.addEventListener("popstate", (event) => {
-      Router.go(event.state?.route || "/", false);
+      Router.go(event.state.route, false);
     });
-
     Router.go(location.pathname);
   },
 
@@ -19,34 +17,47 @@ export const Router = {
     if (addToHistory) {
       history.pushState({ route }, "", route);
     }
-
-    let file = null;
-
+    let pageElement = null;
     switch (route) {
       case "/":
-        file = document.createElement("main");
-        file.textContent("Home");
+        pageElement = document.createElement("home-component");
         break;
-      case "/contacto":
-      case "/contacto.html":
-        file = document.createElement("main");
-        file.textContent("Contacto");
+      case "/contact":
+        pageElement = document.createElement("contacto");
+        break;
+      case "/restaurants":
+        pageElement = document.createElement("h1");
+        pageElement.textContent = "Restaurants Page";
+        break;
+      case "/order":
+        pageElement = document.createElement("h1");
+        pageElement.textContent = "Order Page";
         break;
       default:
-        file = "/partials/404.html";
+        if (route.startsWith("/products/")) {
+          pageElement = document.createElement("h2");
+
+          const paramId = route.substring(route.lastIndexOf("/") + 1);
+          pageElement.textContent = "Product detail page: " + String(paramId);
+
+          pageElement.dataset.productId = paramId;
+        }
         break;
     }
+    if (pageElement) {
+      let currentPage = document.querySelector("main").firstElementChild;
+      if (currentPage) {
+        currentPage.remove();
+        document.querySelector("main").appendChild(pageElement);
+      } else {
+        document.querySelector("main").appendChild(pageElement);
+      }
+    }
 
-    fetch(file)
-      .then((res) => res.text())
-      .then((html) => {
-        const main = document.querySelector("main");
-        main.innerHTML = html;
-        window.scrollTo(0, 0);
-      })
-      .catch((err) => {
-        console.error("Error al cargar la página:", err);
-      });
+    window.scrollY = 0;
+    window.scrollX = 0;
   },
 };
+
+export default Router;
 
