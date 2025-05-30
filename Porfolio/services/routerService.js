@@ -13,7 +13,9 @@ const Router = {
             this.go(event.state.route, false);
         });
 
-        this.go(location.pathname);
+        const validRoutes = ["/", "/projects", "/blog", "/about-me", "/contacto"];
+        const initialRoute = validRoutes.includes(location.pathname) ? location.pathname : "/";
+        this.go(initialRoute, false);
     },
 
     go(route, saveToHistory = false) {
@@ -43,7 +45,6 @@ const Router = {
                 break;
         }
 
-        // Get the template and clone its content
         const template = document.getElementById(templateId);
         if (template) {
             const templateContent = template.content.cloneNode(true);

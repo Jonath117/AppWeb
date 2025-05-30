@@ -1,8 +1,10 @@
 .seccion__titulo {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    font-weight: 700;
     text-align: center;
-    margin: 80px;
-    font: 1.8em sans-serif;
-
+    font-family: sans-serif;
 }
 
 .proyectos-destacados {
