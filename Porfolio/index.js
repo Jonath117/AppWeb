@@ -9,13 +9,6 @@ const savedList = new SavedItemList();
 const savedItemUI = new SavedItemUI('savedItemsContainer');
 
 
-const addItemCommand = new Command(() => {
-    const item = input.value.trim();
-    if (item) {
-        savedList.addItem(item);
-        input.value = '';
-    }
-});
 
 addBtn.addEventListener('click', () => {
     const item = input.value.trim();
