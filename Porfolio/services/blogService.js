@@ -2,7 +2,7 @@ export function initBlogEvents(){
     document.querySelectorAll(".like-button").forEach(button => {
         button.addEventListener("click", () =>{
             const contadorSpan = button.querySelector(".like-count");
-            let actual = parseInt(contadorSpan.textContent, 10);
+            let actual = parseInt(contadorSpan.textContent, 10)
             contadorSpan.textContent = actual + 1;
             console.log("$ Me gusta " + actual);
        });
@@ -16,4 +16,5 @@ export function initBlogEvents(){
             }`;
         });
     });
+
 }
