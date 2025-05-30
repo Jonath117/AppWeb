@@ -1,63 +1,64 @@
 const Router = {
-  init: () => {
-    document.querySelectorAll("a.navbar-principal__link").forEach((a) => {
-      a.addEventListener("click", (event) => {
-        event.preventDefault();
-        const href = event.target.getAttribute("href");
-        Router.go(href);
-      });
-    });
-    window.addEventListener("popstate", (event) => {
-      Router.go(event.state.route, false);
-    });
-    Router.go(location.pathname);
-  },
+    init() {
+        const links = document.querySelectorAll("a.navbar-principal__link");
+        links.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const route = event.target.getAttribute("href");
+                this.go(route, true);
+            });
+        });
 
-  go: (route, addToHistory = true) => {
-    if (addToHistory) {
-      history.pushState({ route }, "", route);
-    }
-    let pageElement = null;
-    switch (route) {
-      case "/":
-        pageElement = document.createElement("home-component");
-        break;
-      case "/contact":
-        pageElement = document.createElement("contacto");
-        break;
-      case "/restaurants":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Restaurants Page";
-        break;
-      case "/order":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Order Page";
-        break;
-      default:
-        if (route.startsWith("/products/")) {
-          pageElement = document.createElement("h2");
+        window.addEventListener("popstate", (event) => {
+            this.go(event.state.route, false);
+        });
 
-          const paramId = route.substring(route.lastIndexOf("/") + 1);
-          pageElement.textContent = "Product detail page: " + String(paramId);
+        this.go(location.pathname);
+    },
 
-          pageElement.dataset.productId = paramId;
+    go(route, saveToHistory = false) {
+        if(saveToHistory)
+            history.pushState({ route }, "", route);
+
+        const mainElement = document.getElementById('main');
+        mainElement.innerHTML = "";
+
+        let templateId = null;
+
+        switch(route){
+            case '/':
+                templateId = 'inicio-template';
+                break;
+            case '/projects':
+                templateId = 'proyectos-template';
+                break;
+            case '/blog':
+                templateId = 'blog-template';
+                break;
+            case '/about-me':
+              templateId = 'about-me-template';
+                break;
+            case '/contacto':
+                templateId = 'contacto-template';
+                break;
         }
-        break;
-    }
-    if (pageElement) {
-      let currentPage = document.querySelector("main").firstElementChild;
-      if (currentPage) {
-        currentPage.remove();
-        document.querySelector("main").appendChild(pageElement);
-      } else {
-        document.querySelector("main").appendChild(pageElement);
-      }
-    }
 
-    window.scrollY = 0;
-    window.scrollX = 0;
-  },
-};
+        // Get the template and clone its content
+        const template = document.getElementById(templateId);
+        if (template) {
+            const templateContent = template.content.cloneNode(true);
+            mainElement.appendChild(templateContent);
+        } else {
+            mainElement.innerHTML = `
+                <section class="error">
+                    <h1>Error</h1>
+                    <p>No se pudo cargar el contenido de la página.</p>
+                </section>
+            `;
+        }
+        
+        window.scrollTo(0, 0);
+    }
+}
 
 export default Router;
-

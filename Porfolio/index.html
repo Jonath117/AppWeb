@@ -20,74 +20,127 @@
           </ul>
         </nav>
         <nav class="navbar-secundaria">  
-        </nav>  
+        </nav> 
 
-  <main>
-      <section class="presentacion-inicio">
-        <h1>Hola, soy Jonathan</h1>
-        <p class="texto">Soy estudiante de ingeniería de software apasionado por el desarrollo y resolución de problemas relacionado al mundo del software.</p>
-        <p class="texto">He tenido experiencias en trabajo en equipo lo cual me ha aportado habilidades comunicativas cuando me toque colaborar con un equipo de desarrollo, para así poder comunicar y resolver de manera eficiente los problemas.</p>
-        <p class="texto">Disfruto mucho de los videojuegos y de las actividades al aire libre, los deportes, actividades que requieren mucho esfuerzo físico.</p>
-      </section>
+  <main id="main">
 
-      <h3 class="link">
-        <a href="projects.html">Mira mis Proyectos →</a>
-      </h3>
+  </main>
 
-      <section class="habilidades">
-        <h2 class="habilidades__titulo"> Habilidades Técnicas</h2>
-        <div class="habilidades__lista">
-          <div class="habilidades__item">
-            <img src="./assets/images/angular.png" alt="Logo Angular" class="habilidades__icono" />
-            <p class="habilidades__texto">Angular 18</p>
-          </div>
-          <div class="habilidades__item">
-            <img src="./assets/images/net.png" alt="Logo Net" class="habilidades__icono" />
-            <p class="habilidades__texto">.Net 7</p>
-          </div>
-          <div class="habilidades__item">
-            <img src="./assets/images/cplusplus.png" alt="Logo C++" class="habilidades__icono" />
-            <p class="habilidades__texto">C++</p>
-          </div>
-          <div class="habilidades__item">
-            <img src="./assets/images/py.png" alt="Logo Python" class="habilidades__icono" />
-            <p class="habilidades__texto">Python</p>
+  <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__social">
+            <h3 class="footer__social-heading">Redes sociales</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__social-link"
+                  ><img
+                    src="./assets/svg/facebook.svg"
+                    alt="Logo Facebook"
+                    class="footer__social-icon"
+                  />
+                  Facebook</a
+                >
+              </li>
+              <li class="footer__list-item">
+                <img
+                  src="./assets/svg/ign.svg"
+                  alt="Logo Instagram"
+                  class="footer__social-icon"
+                />
+                <a href="#" class="footer__social-link"> Instagram</a>
+              </li>
+              <li class="footer__list-item">
+                <img
+                  src="./assets/svg/linkedin.svg"
+                  alt="Logo Instagram"
+                  class="footer__social-icon"
+                />
+                <a href="#" class="footer__social-link"> Linkedin</a>
+              </li>
+              <li class="footer__list-item">
+                <img
+                  src="./assets/svg/git.svg"
+                  alt="Logo Instagram"
+                  class="footer__social-icon"
+                />
+                <a href="#" class="footer__social-link"> Github</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </footer>
 
-      <section id="proyect" class="proyectos">
-          <h2 class="seccion__titulo">Proyectos Destacados</h2>
-          <div class="proyectos-destacados">
-              <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
-                  <div class="proyecto__contenido">
-                      <h3 class="proyecto__titulo">Repositorio de Articulos Cientificos</h3>
-                      <p class="proyecto__descripcion">Desarrollado con Angular 18, .Net 7 y aplicando metologías ágiles de desarrollo
-                        en equipo, consiste en un sitio donde se almacenan artículos, se manejan roles,
-                        se aplica una interfaz clara e intuitiva para una buena experiencia del usuario
-                        fina.</p>
-                      <a href="#" class="proyecto__enlace">Ver proyecto →</a>
-                  </div>
-              </div>
-              <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
-                  <div class="proyecto__contenido">
-                      <h3 class="proyecto__titulo">Estrella de la muerte</h3>
-                      <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
-                      <a href="#" class="proyecto__enlace">Ver proyecto →</a>
-                  </div>
-              </div>
-              <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
-                  <div class="proyecto__contenido">
-                      <h3 class="proyecto__titulo">Este Portafolio</h3>
-                      <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
-                      <a href="#" class="proyecto__enlace">Ver proyecto →</a>
-                  </div>
-              </div>
+    <template id="inicio-template">
+        <section class="presentacion-inicio">
+          <h1>Hola, soy Jonathan</h1>
+          <p class="texto">Soy estudiante de ingeniería de software apasionado por el desarrollo y resolución de problemas relacionado al mundo del software.</p>
+          <p class="texto">He tenido experiencias en trabajo en equipo lo cual me ha aportado habilidades comunicativas cuando me toque colaborar con un equipo de desarrollo, para así poder comunicar y resolver de manera eficiente los problemas.</p>
+          <p class="texto">Disfruto mucho de los videojuegos y de las actividades al aire libre, los deportes, actividades que requieren mucho esfuerzo físico.</p>
         </section>
-        
+
+        <h3 class="link">
+          <a href="projects.html">Mira mis Proyectos →</a>
+        </h3>
+
+        <section class="habilidades">
+          <h2 class="habilidades__titulo"> Habilidades Técnicas</h2>
+          <div class="habilidades__lista">
+            <div class="habilidades__item">
+              <img src="./assets/images/angular.png" alt="Logo Angular" class="habilidades__icono" />
+              <p class="habilidades__texto">Angular 18</p>
+            </div>
+            <div class="habilidades__item">
+              <img src="./assets/images/net.png" alt="Logo Net" class="habilidades__icono" />
+              <p class="habilidades__texto">.Net 7</p>
+            </div>
+            <div class="habilidades__item">
+              <img src="./assets/images/cplusplus.png" alt="Logo C++" class="habilidades__icono" />
+              <p class="habilidades__texto">C++</p>
+            </div>
+            <div class="habilidades__item">
+              <img src="./assets/images/py.png" alt="Logo Python" class="habilidades__icono" />
+              <p class="habilidades__texto">Python</p>
+            </div>
+          </div>
+        </section>
+      </template>
+
+
+      <template id="proyectos-template">
+        <section id="proyect" class="proyectos">
+            <h2 class="seccion__titulo">Proyectos Destacados</h2>
+            <div class="proyectos-destacados">
+                <div class="proyecto">
+                    <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__titulo">Repositorio de Articulos Cientificos</h3>
+                        <p class="proyecto__descripcion">Desarrollado con Angular 18, .Net 7 y aplicando metologías ágiles de desarrollo
+                          en equipo, consiste en un sitio donde se almacenan artículos, se manejan roles,
+                          se aplica una interfaz clara e intuitiva para una buena experiencia del usuario
+                          fina.</p>
+                        <a href="#" class="proyecto__enlace">Ver proyecto →</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__titulo">Estrella de la muerte</h3>
+                        <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
+                        <a href="#" class="proyecto__enlace">Ver proyecto →</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                    <div class="proyecto__contenido">
+                        <h3 class="proyecto__titulo">Este Portafolio</h3>
+                        <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
+                        <a href="#" class="proyecto__enlace">Ver proyecto →</a>
+                    </div>
+                </div>
+          </section>
+        </template>
+
+      <template id="blog-template">
         <section id="blog" class="blogs">
           <h2 class="blogs__titulo">Blog</h2>
           <div class="blog-posts">
@@ -146,54 +199,35 @@
             </article>
           </div>
         </section>
-  </main>
+      </template>
 
+      <template id="contacto-template">
+        <section id="contacto" class="contacto">
+          <h2 class="contacto__titulo">Contáctame</h2>
+          <form class="contacto__formulario">
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" id="nombre" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje:</label>
+              <textarea id="mensaje" class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="form-button">Enviar</button>
+      </template>
+ 
+      <template id="about-me-template">
+        <section id="about-me" class="about-me">
+          <h2 class="about-me__titulo">Acerca de mí</h2>
+          <p class="about-me__texto">Soy un estudiante de ingeniería de software con una gran pasión por el desarrollo y la resolución de problemas relacionados con el mundo del software. Me encanta aprender nuevas tecnologías y aplicar mis conocimientos en proyectos prácticos.</p>
+          <p class="about-me__texto">He tenido experiencias en trabajo en equipo, lo cual me ha aportado habilidades comunicativas que considero esenciales para colaborar de manera efectiva con un equipo de desarrollo. Me esfuerzo por comunicar y resolver problemas de manera eficiente.</p>
+          <p class="about-me__texto">Además de mi interés por la programación, disfruto mucho de los videojuegos y de las actividades al aire libre, como los deportes y otras actividades que requieren esfuerzo físico.</p>
+        </section>
+      </template>
 
-
-    <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__social">
-            <h3 class="footer__social-heading">Redes sociales</h3>
-            <ul class="footer__list">
-              <li class="footer__list-item">
-                <a href="#" class="footer__social-link"
-                  ><img
-                    src="./assets/svg/facebook.svg"
-                    alt="Logo Facebook"
-                    class="footer__social-icon"
-                  />
-                  Facebook</a
-                >
-              </li>
-              <li class="footer__list-item">
-                <img
-                  src="./assets/svg/ign.svg"
-                  alt="Logo Instagram"
-                  class="footer__social-icon"
-                />
-                <a href="#" class="footer__social-link"> Instagram</a>
-              </li>
-              <li class="footer__list-item">
-                <img
-                  src="./assets/svg/linkedin.svg"
-                  alt="Logo Instagram"
-                  class="footer__social-icon"
-                />
-                <a href="#" class="footer__social-link"> Linkedin</a>
-              </li>
-              <li class="footer__list-item">
-                <img
-                  src="./assets/svg/git.svg"
-                  alt="Logo Instagram"
-                  class="footer__social-icon"
-                />
-                <a href="#" class="footer__social-link"> Github</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </div> 
-      
 </body>
 </html>
