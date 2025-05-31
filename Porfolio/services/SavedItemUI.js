@@ -1,33 +1,42 @@
-import { SavedItemList } from './savedItemList.js';
+import { savedItemList } from './SavedItemList.js';
 
-export class SavedItemUI {
-  constructor(containerId) {
-    this.container = document.getElementById(containerId);
-    this.list = new SavedItemList();
-
-    this.list.addEventListener('update', (e) => this.render(e.detail));
-    this.render(this.list.getItems());
-  }
-
-  render(items) {
-    this.container.innerHTML = '';
-    if (items.length === 0) {
-      this.container.innerHTML = '<p>No hay items guardados</p>';
+class SavedItemUi {
+  constructor() {
+    this.container = document.getElementById('savedItemsContainer');
+    if (!this.container) {
+      console.error('No se encontro');
       return;
     }
+    
+    savedItemList.addObserver(this);
+    this.update(savedItemList.items || []);
+  }
 
-    const ul = document.createElement('ul');
-    items.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = item;
+  update(items) {
+    if (!this.container) return;
+    
+    this.container.innerHTML = `
+      <h2>Blogs Guardados (${items.length})</h2>
+      ${items.length ? items.filter(item => item && item.title).map(item => `
+        <div class="saved-item">
+          <h3>${item.title}</h3>
+          <p>${item.content?.substring(0, 100) || ''}...</p>
+          <div class="saved-item-stats">
+            <span>❤️ ${item.likes || 0} likes</span>
+            <button class="remove-btn" data-id="${item.id}">Eliminar</button>
+          </div>
+        </div>
+      `).join('') : '<p>No hay blogs guardados aún</p>'}
+    `;
 
-      const removeBtn = document.createElement('button');
-      removeBtn.textContent = 'Remove';
-      removeBtn.onclick = () => this.list.removeItem(item);
-
-      li.appendChild(removeBtn);
-      ul.appendChild(li);
-    });
-    this.container.appendChild(ul);
+    if (this.container.querySelectorAll) {
+      this.container.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          savedItemList.removeItem(e.target.dataset.id);
+        });
+      });
+    }
   }
 }
+
+export default SavedItemUi;

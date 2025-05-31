@@ -1,33 +1,48 @@
-export class SavedItemList extends EventTarget {
+import Storage from './Storage.js';
+import { likeService } from './LikeService.js';
+
+class SavedItemList {
   static instance;
+  items = [];
+  observers = [];
 
   constructor() {
-    super();
     if (SavedItemList.instance) {
       return SavedItemList.instance;
     }
-    this.items = [];
     SavedItemList.instance = this;
+    this.items = Storage.load('savedBlogs') || [];
+  }
+
+  addObserver(observer) {
+    this.observers.push(observer);
+  }
+
+  notifyObservers() {
+    this.observers.forEach(observer => observer.update(this.items));
   }
 
   addItem(item) {
-    if (!this.items.includes(item)) {
+    if (!this.items.some(i => i.id === item.id)) {
+      item.likes = likeService.getLikes(item.id) || 0;
       this.items.push(item);
-      this.dispatchEvent(new CustomEvent('update', { detail: [...this.items] }));
+      Storage.save('savedBlogs', this.items);
+      this.notifyObservers();
     }
   }
 
-  removeItem(item) {
-    this.items = this.items.filter(i => i !== item);
-    this.dispatchEvent(new CustomEvent('update', { detail: [...this.items] }));
+  removeItem(itemId) {
+    this.items = this.items.filter(item => item.id !== itemId);
+    Storage.save('savedBlogs', this.items);
+    this.notifyObservers();
   }
 
-  getItems() {
-    return [...this.items];
-  }
-
-  clearAll() {
-    this.items = [];
-    this.dispatchEvent(new CustomEvent('update', { detail: [] }));
+  search(term) {
+    return this.items.filter(item => 
+      item.title.toLowerCase().includes(term.toLowerCase()) ||
+      item.content.toLowerCase().includes(term.toLowerCase())
+    );
   }
 }
+
+export const savedItemList = new SavedItemList();

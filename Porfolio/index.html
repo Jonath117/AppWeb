@@ -13,9 +13,6 @@
         <nav class="navbar-principal">
           <ul class="navbar-principal__menu">
 
-            <li id="busqueda"class="navbar-principal__item">
-              <input type="text" class="navbar-principal__search" placeholder="Buscar...">
-            </li>
             <li><a class="navbar-principal__link" href="/">Inicio</a></li>
             <li><a class="navbar-principal__link" href="/blog">Blog</a></li>
             <li><a class="navbar-principal__link" href="/contacto">Contáctame</a></li>
@@ -65,7 +62,7 @@
           <h2 class="seccion__titulo">Proyectos Destacados</h2>
           <div class="proyectos-destacados">
               <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                  <div class="proyecto__imagen">Imagen del Proyecto 2</div>
                   <div class="proyecto__contenido">
                       <h3 class="proyecto__titulo">Repositorio de Articulos Cientificos</h3>
                       <p class="proyecto__descripcion">Desarrollado con Angular 18, .Net 7 y aplicando metologías ágiles de desarrollo
@@ -76,7 +73,7 @@
                   </div>
               </div>
               <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                  <div class="proyecto__imagen">Imagen del Proyecto 2</div>
                   <div class="proyecto__contenido">
                       <h3 class="proyecto__titulo">Estrella de la muerte</h3>
                       <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
@@ -84,7 +81,7 @@
                   </div>
               </div>
               <div class="proyecto">
-                  <div class="proyecto__imagen">Imagen del Proyecto 1</div>
+                  <div class="proyecto__imagen">Imagen del Proyecto 2</div>
                   <div class="proyecto__contenido">
                       <h3 class="proyecto__titulo">Este Portafolio</h3>
                       <p class="proyecto__descripcion">Aplicación web para gestionar tareas diarias con React y Firebase.</p>
@@ -107,16 +104,39 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="blog-post__stats">
                   <div class="blog-post__likes">
-                    <button class="like-button">
-                      <img src="./assets/images/like.png" alt="Me gusta"></img> 
-                      <span class="like-count">0</span>
-                    </button>
+                    <like-button blog-id="unique-blog-id-1"></like-button>
                   </div>
                   <div class="blog-post__save">
-                    <button class="save-button">
-                      <img src="./assets/images/save.png" alt="Guardar"></img>
-                      <span> Guardar</span>
-                    </button>
+                    <save-button 
+                      item-id="unique-blog-id-1" 
+                      item-title="Título del Post 1" 
+                      item-content="Lorem ipsum dolor sit amet...">
+                    </save-button>
+                  </div>
+                </div> 
+                <a href="#" class="blog-post__enlace">Leer más →</a>
+              </div>
+            </article>
+
+            <article class="blog-post">
+              <div class="blog-post__imagen">
+                <img src="./assets/images/articulo.png" alt="Imagen del post" />
+              </div>
+              <div class="blog-post__contenido">
+                <h3 class="blog-post__titulo">Título del Post 3</h3>
+                <p class="blog-post__fecha">15 mayo, 2025</p>
+                <p class="blog-post__descripcion">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="blog-post__stats">
+                  <div class="blog-post__likes">
+                    <like-button blog-id="unique-blog-id-2"></like-button>
+                  </div>
+                  <div class="blog-post__save">
+                    <save-button 
+                      item-id="unique-blog-id-2" 
+                      item-title="Título del Post 2" 
+                      item-content="Lorem ipsum dolor sit amet">
+                    </save-button>
                   </div>
                 </div> 
                 <a href="#" class="blog-post__enlace">Leer más →</a>
@@ -134,16 +154,14 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="blog-post__stats">
                   <div class="blog-post__likes">
-                    <button class="like-button">
-                      <img src="./assets/images/like.png" alt="Me gusta"></img> 
-                      <span class="like-count">24</span>
-                    </button>
+                    <like-button blog-id="unique-blog-id-3"></like-button>
                   </div>
                   <div class="blog-post__save">
-                    <button class="save-button">
-                      <img src="./assets/images/save.png" alt="Guardar"></img>
-                      <span> Guardar </span>
-                    </button>
+                    <save-button 
+                      item-id="unique-blog-id-3" 
+                      item-title="Título del Post 3" 
+                      item-content="Lorem ipsum dolor sit amet...">
+                    </save-button>
                   </div>
                 </div> 
                 <a href="#" class="blog-post__enlace">Leer más →</a>
@@ -151,12 +169,12 @@
             </article>
           </div>
         </section>
+        
+        <h1>Blogs Guardados</h1>
+        <input id="itemInput" type="text" placeholder="Buscador" />
+        <button id="addBtn">Buscar</button>
+        <div id="savedItemsContainer"></div>
 
-          <h1>Items Guardados</h1>
-          <input id="itemInput" type="text" placeholder="Add item" />
-          <button id="addBtn">Agregar</button>
-          <div id="savedItemsContainer"></div>
-          
   </main>
 
 
