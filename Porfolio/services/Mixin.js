@@ -34,3 +34,17 @@ export const LikeStateMixin = (BaseClass) => class extends BaseClass {
     this.updateLikeCount();
   }
 };
+
+export const AddObserver = (BaseClass) => class extends BaseClass{
+  observers = [];
+
+  addObserver(observer){
+    this.observers.push(observers);
+  }
+
+  notifyObservers(){
+    this.observers.forEach(observer => observer.update(this.items))
+  }
+
+}
+

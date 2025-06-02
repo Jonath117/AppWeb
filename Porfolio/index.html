@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./blocks/style.css">
+    <base href="/Porfolio/">
     
     <script src="index.js" defer type="module"></script>
 </head>
 <body>
-
         <nav class="navbar-principal">
           <ul class="navbar-principal__menu">
 
@@ -21,9 +21,13 @@
           </ul>
         </nav>
         <nav class="navbar-secundaria">  
-        </nav>  
+        </nav>
 
-  <main>
+  <main id="main">
+
+  </main>
+
+    <template id="inicio-template">
       <section class="presentacion-inicio">
         <h1>Hola, soy Jonathan</h1>
         <p class="texto">Soy estudiante de ingeniería de software apasionado por el desarrollo y resolución de problemas relacionado al mundo del software.</p>
@@ -57,7 +61,9 @@
           </div>
         </div>
       </section>
+    </template>
 
+    <template id="proyectos-template">
       <section id="proyect" class="proyectos">
           <h2 class="seccion__titulo">Proyectos Destacados</h2>
           <div class="proyectos-destacados">
@@ -89,7 +95,10 @@
                   </div>
               </div>
         </section>
+      </template>
+      
         
+      <template id="blog-template">
         <section id="blog" class="blogs">
           <h2 class="blogs__titulo">Blog</h2>
           <div class="blog-posts">
@@ -169,13 +178,26 @@
             </article>
           </div>
         </section>
-        
-        <h1>Blogs Guardados</h1>
-        <input id="itemInput" type="text" placeholder="Buscador" />
-        <button id="addBtn">Buscar</button>
-        <div id="savedItemsContainer"></div>
+      
+      </template>
+      <h1>Blogs Guardados</h1>
+      <input id="itemInput" type="text" placeholder="Buscador" />
+      <button id="addBtn">Buscar</button>
+      <div id="savedItemsContainer"></div>
 
-  </main>
+
+      <template id="contacto-template">
+        <section class="contacto-template">
+          <h1> Contactame</h1>
+        </section>
+      </template>
+
+      
+      <template id="about-me-template">
+        <section>
+          hola soy un about me
+        </section>
+      </template>
 
 
 

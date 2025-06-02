@@ -7,52 +7,56 @@ const Router = {
         Router.go(href);
       });
     });
+
+
     window.addEventListener("popstate", (event) => {
       Router.go(event.state.route, false);
     });
-    Router.go(location.pathname);
+
+
+    const validRoutes = ["/", "/projects", "/blog", "/about-me", "/contacto"];
+    const initialRoute = validRoutes.includes(location.pathname) ? location.pathname : "/";
+    this.go(initialRoute, false);
   },
 
-  go: (route, addToHistory = true) => {
-    if (addToHistory) {
+  go: (route, saveToHistory = false) => {
+    if (saveToHistory) 
       history.pushState({ route }, "", route);
-    }
-    let pageElement = null;
-    switch (route) {
-      case "/":
-        pageElement = document.createElement("home-component");
-        break;
-      case "/contact":
-        pageElement = document.createElement("contacto");
-        break;
-      case "/restaurants":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Restaurants Page";
-        break;
-      case "/order":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Order Page";
-        break;
-      default:
-        if (route.startsWith("/products/")) {
-          pageElement = document.createElement("h2");
+    
+    const mainElement = document.getElementById("main");
+    mainElement.innerHTML = '';
 
-          const paramId = route.substring(route.lastIndexOf("/") + 1);
-          pageElement.textContent = "Product detail page: " + String(paramId);
+    let templateId = null;
 
-          pageElement.dataset.productId = paramId;
+        switch(route){
+            case '/':
+                templateId = 'inicio-template';
+                break;
+            case '/projects':
+                templateId = 'proyectos-template';
+                break;
+            case '/blog':
+                templateId = 'blog-template';
+                break;
+            case '/contacto':
+                templateId = 'contacto-template';
+                break;
+            case '/about-me':
+                templateId = 'about-me-template';
         }
-        break;
-    }
-    if (pageElement) {
-      let currentPage = document.querySelector("main").firstElementChild;
-      if (currentPage) {
-        currentPage.remove();
-        document.querySelector("main").appendChild(pageElement);
-      } else {
-        document.querySelector("main").appendChild(pageElement);
-      }
-    }
+        
+      const template = document.getElementById(templateId);
+        if (template) {
+            const templateContent = template.content.cloneNode(true);
+            mainElement.appendChild(templateContent);
+        } else {
+            mainElement.innerHTML = `
+                <section class="error">
+                    <h1>Error</h1>
+                    <p>No se pudo cargar el contenido de la página.</p>
+                </section>
+            `;
+        }
 
     window.scrollY = 0;
     window.scrollX = 0;

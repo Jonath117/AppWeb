@@ -1,4 +1,5 @@
 import { savedItemList } from './SavedItemList.js';
+import { AddObserver } from './Mixin.js';
 
 class SavedItemUi {
   constructor() {

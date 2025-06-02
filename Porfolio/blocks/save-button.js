@@ -49,6 +49,7 @@ class SaveButton extends HTMLElement {
       </button>
     `;
   }
+
 }
 
 customElements.define('save-button', SaveButton);
