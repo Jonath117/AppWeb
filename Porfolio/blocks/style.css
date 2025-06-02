@@ -6,6 +6,7 @@
 @import url('nav-bar-2/nav-bar-2.css');
 @import url('projects/projects.css');
 @import url('Habilidades/Habilidades.css');
+@import url('saved-items/saved-items.css');
 
 body {
     margin: 0;
