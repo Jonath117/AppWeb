@@ -1,0 +1,34 @@
+[
+  {
+    "titulo": "Cómo mejorar tu productividad",
+    "fecha": "1 junio, 2025",
+    "descripcion": "Descubre técnicas prácticas para ser más eficiente y alcanzar tus metas diarias.",
+    "imagen": "./assets/images/productividad.png"
+  },
+  {
+    "titulo": "Tendencias de desarrollo web 2025",
+    "fecha": "28 mayo, 2025",
+    "descripcion": "Exploramos las últimas tecnologías y frameworks que están marcando el rumbo del desarrollo web.",
+    "imagen": "./assets/images/devweb.png"
+  },
+  {
+    "titulo": "Hábitos saludables para programadores",
+    "fecha": "20 mayo, 2025",
+    "descripcion": "Evita el burnout y mejora tu bienestar con estos consejos pensados para quienes pasan horas frente al PC.",
+    "imagen": "./assets/images/salud.png"
+  },
+  {
+    "titulo": "Guía básica de TypeScript",
+    "fecha": "12 mayo, 2025",
+    "descripcion": "Aprende los fundamentos de TypeScript, el superset de JavaScript más popular en proyectos modernos.",
+    "imagen": "./assets/images/typescript.png"
+  },
+  {
+    "titulo": "Cómo construir un portafolio profesional",
+    "fecha": "5 mayo, 2025",
+    "descripcion": "Dale un impulso a tu carrera con un portafolio web que destaque tus mejores proyectos.",
+    "imagen": "./assets/images/portafolio.png"
+  }
+]
+
+

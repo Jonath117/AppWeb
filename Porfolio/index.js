@@ -1,10 +1,10 @@
 import Router from './services/routerService.js';
-import { initBlogEvents } from './services/blogService.js';
 
-
+globalThis.DOM = {};
 globalThis.app = {};
 
-window.addEventListener("DOMContentLoaded", () => {
+app.Router = Router;
+
+window.addEventListener("DOMContentLoaded", async () => {
     Router.init();
-    initBlogEvents();
 });
