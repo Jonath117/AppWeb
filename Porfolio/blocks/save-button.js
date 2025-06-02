@@ -1,5 +1,7 @@
 import { likeService } from '../services/LikeService.js';
 import { savedItemList } from '../services/SavedItemList.js';
+import {SaveStateMixin } from '../services/Mixin.js';
+import { LikeStateMixin } from '../services/Mixin.js';
 
 class SaveButton extends HTMLElement {
   constructor() {
