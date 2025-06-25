@@ -57,6 +57,11 @@
   .navbar-principal__item {
     padding: 5px;
   }
+
+  .navbar-secundaria {
+    background-color: #B0B0B0;
+    padding: 10px;
+}
 }
 
 /* Versión para pantallas muy grandes */
