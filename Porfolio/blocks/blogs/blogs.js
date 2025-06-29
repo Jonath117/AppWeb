@@ -1,6 +1,7 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <link rel="stylesheet" href="./blocks/blogs/blogs.css">
+    <navbar-page></navbar-page>
 
     <section id="blog" class="blogs">
           <h2 class="blogs__titulo">Blog</h2>
@@ -80,7 +81,9 @@ template.innerHTML = `
               </div>
             </article>
           </div>
-        </section>   
+        </section>  
+        
+    <footer-page></footer-page>
 `
 ;
 class BlogsPage extends HTMLElement {

@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     margin-left: 800px;
 }
@@ -33,6 +33,13 @@
 .navbar-principal__link:hover {
     background-color: #575757;
     border-radius: 5px;
+}
+
+.navbar-secundaria {
+    background-color: #B0B0B0;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 /* RESPONSIVE */

@@ -3,6 +3,7 @@ template.innerHTML = `
     <link rel="stylesheet" href="./blocks/inicio/inicio.css">
     <link rel="stylesheet" href="./blocks/habilidades/habilidades.css">
 
+    <navbar-page></navbar-page>
     <section class="presentacion-inicio">
         <h1>Hola, soy Jonathan</h1>
         <p class="texto">Soy estudiante de ingeniería de software apasionado por el desarrollo y resolución de problemas relacionado al mundo del software.</p>
@@ -11,7 +12,7 @@ template.innerHTML = `
       </section>
 
       <h3 class="link">
-        <a href="projects.html">Mira mis Proyectos →</a>
+        <a href="#" id="projects-btn">Mira mis Proyectos →</a>
       </h3>
 
 
@@ -36,6 +37,7 @@ template.innerHTML = `
           </div>
         </div>
       </section>
+  <footer-page></footer-page>
 
 `
 ;
@@ -43,6 +45,14 @@ class InicioPage extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" }).appendChild(template.content.cloneNode(true));
+    }
+
+    connectedCallback() {
+      const projectsBtn = this.shadowRoot.getElementById("projects-btn");
+      projectsBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.dispatchEvent(new CustomEvent("navigate", { detail: "projects" }));
+      });
     }
 }
 
