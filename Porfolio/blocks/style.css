@@ -5,8 +5,10 @@
 @import url('nav-bar/nav-bar.css');
 @import url('projects/projects.css');
 @import url('Habilidades/Habilidades.css');
+@import url('contact/contact.css');
 
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }

@@ -6,6 +6,7 @@ template.innerHTML = `
     <section id="blog" class="blogs">
           <h2 class="blogs__titulo">Blog</h2>
           <div class="blog-posts">
+
             <article class="blog-post">
               <div class="blog-post__imagen">
                 <img src="./assets/images/articulo.png" alt="Imagen del post" />
@@ -81,7 +82,8 @@ template.innerHTML = `
               </div>
             </article>
           </div>
-        </section>  
+        </section>
+        
         
     <footer-page></footer-page>
 `

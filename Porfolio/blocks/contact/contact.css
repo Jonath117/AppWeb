@@ -1,0 +1,124 @@
+:root {
+    /* Define variables para colores y fuentes para fácil mantenimiento */
+    --text-color: #333;
+    --background-color: #f8f8f8;
+    --card-background: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    /* Usar min-height para asegurar que el contenido esté centrado verticalmente
+       sin forzar un alto fijo si el contenido es menor. */
+    min-height: 80vh; /* Ajusta según necesites, por ejemplo, 100vh si ocupa toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Añadir padding general para pantallas pequeñas */
+    box-sizing: border-box; /* Incluir padding en el ancho/alto */
+    background-color: var(--background-color); /* Fondo ligero */
+    font-family: var(--font-family);
+}
+
+.contact__title {
+    font-size: clamp(2em, 5vw, 3em); /* Tamaño de fuente responsivo */
+    color: var(--text-color);
+    margin-bottom: 30px; /* Más espacio */
+    text-align: center;
+    font-weight: 600; /* Un poco más de peso */
+}
+
+.contact__form {
+    width: 100%;
+    max-width: 650px; /* Aumentar un poco el max-width para formularios más grandes */
+    padding: 30px; /* Más padding interno */
+    background-color: var(--card-background);
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px var(--shadow); /* Sombra más pronunciada y suave */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+.contact__input,
+.contact__textarea {
+    width: 100%;
+    padding: 12px 15px; /* Más padding para los inputs */
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Bordes redondeados en inputs */
+    font-size: 1.05em; /* Ligeramente más grande */
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-sizing: border-box; /* Asegurar que el padding no aumente el ancho total */
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+    color: #999; /* Color más suave para el placeholder */
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+    outline: none; /* Eliminar el outline por defecto */
+    border-color: var(--primary-color); /* Resaltar borde al enfocar */
+    box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.2); /* Sombra al enfocar */
+}
+
+.contact__textarea {
+    min-height: 120px; /* Aumentar un poco la altura mínima */
+    resize: vertical; /* Permitir redimensionar solo verticalmente */
+}
+
+.contact__button {
+    width: 100%;
+    padding: 14px 20px; /* Más padding para el botón */
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    font-size: 1.15em; /* Tamaño de fuente ligeramente más grande */
+    font-weight: 600; /* Un poco más de peso */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para interacción */
+    letter-spacing: 0.5px; /* Un poco de espacio entre letras */
+}
+
+.contact__button:hover {
+    background-color: #005bb5; /* Oscurecer al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+}
+
+.contact__button:active {
+    background-color: #004a99; /* Oscurecer más al hacer click */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .contact__form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 15px;
+    }
+    .contact__title {
+        margin-bottom: 25px;
+    }
+    .contact__form {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .contact__input,
+    .contact__textarea {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .contact__button {
+        padding: 12px 15px;
+        font-size: 1.1em;
+    }
+}

@@ -11,6 +11,7 @@ import './blocks/projects/projects.js';
 import './blocks/about-me/about-me.js';
 import './blocks/footer/footer.js';
 import './blocks/footer/footer.js';
+import './blocks/contact/contact.js';
 
 import Router from './services/routerService.js';
 
