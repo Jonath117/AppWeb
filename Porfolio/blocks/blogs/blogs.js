@@ -18,14 +18,19 @@ template.innerHTML = `
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="blog-post__stats">
                   <div class="blog-post__likes">
-                    <like-button blog-id="unique-blog-id-1"></like-button>
+                    <like-button blog-id="like-id1">
+                      <img src="./assets/images/like.png" alt="Like Icon" class="icon-like"/>
+                    </like-button>
                   </div>
                   <div class="blog-post__save">
-                    <save-button 
-                      item-id="unique-blog-id-1" 
+                    <button 
+                      item-id="save-id1" 
                       item-title="Título del Post 1" 
-                      item-content="Lorem ipsum dolor sit amet...">
-                    </save-button>
+                      item-content="Lorem ipsum dolor sit amet..."
+                      class="blog-post__save-btn"
+                      >
+                      Guardar                      
+                    </button>
                   </div>
                 </div> 
                 <a href="#" class="blog-post__enlace">Leer más →</a>
@@ -43,14 +48,19 @@ template.innerHTML = `
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="blog-post__stats">
                   <div class="blog-post__likes">
-                    <like-button blog-id="unique-blog-id-2"></like-button>
+                    <like-button blog-id="like-id2">
+                        <img src="./assets/images/like.png" alt="Like Icon" class="icon-like"/>
+                    </like-button>
                   </div>
                   <div class="blog-post__save">
-                    <save-button 
-                      item-id="unique-blog-id-2" 
+                    <button 
+                      item-id="save-id2" 
                       item-title="Título del Post 2" 
-                      item-content="Lorem ipsum dolor sit amet">
-                    </save-button>
+                      item-content="Lorem ipsum dolor sit amet"
+                      class="blog-post__save-btn"
+                      >
+                      Guardar                      
+                    </button>
                   </div>
                 </div> 
                 <a href="#" class="blog-post__enlace">Leer más →</a>
@@ -68,14 +78,18 @@ template.innerHTML = `
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="blog-post__stats">
                   <div class="blog-post__likes">
-                    <like-button blog-id="unique-blog-id-3"></like-button>
+                    <like-button blog-id="like-id3">
+                      <img src="./assets/images/like.png" alt="Like Icon" class="icon-like"/>
+                    </like-button>
                   </div>
                   <div class="blog-post__save">
-                    <save-button 
-                      item-id="unique-blog-id-3" 
+                    <button 
+                      item-id="save-id3" 
                       item-title="Título del Post 3" 
-                      item-content="Lorem ipsum dolor sit amet...">
-                    </save-button>
+                      item-content="Lorem ipsum dolor sit amet..."
+                      class="blog-post__save-btn">
+                      Guardar
+                    </button>
                   </div>
                 </div> 
                 <a href="#" class="blog-post__enlace">Leer más →</a>
@@ -84,7 +98,7 @@ template.innerHTML = `
           </div>
         </section>
         
-        
+        <savedblogs-page></savedblogs-page>
     <footer-page></footer-page>
 `
 ;

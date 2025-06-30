@@ -1,0 +1,41 @@
+.saved-blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.saved-blogs h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.saved-blogs__search {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.saved-blogs__btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saved-blogs__btn:hover {
+    background-color: #0056b3;
+}
+
+.saved-blogs__container-saved {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}

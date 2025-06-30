@@ -5,6 +5,7 @@ const Router = {
     contact: "contact-page",
     projects: "projects-page",
     aboutMe: "about-me-page",
+    savedblogs : "savedblogs-page",
   },
 
   init(){
@@ -37,7 +38,7 @@ const Router = {
     if(tagName && root) {
       root.innerHTML = ""
       const page = document.createElement(tagName);
-      page.classList.add(".fade-in");
+      page.classList.add("fade-in");
       root.appendChild(page);
     }
 

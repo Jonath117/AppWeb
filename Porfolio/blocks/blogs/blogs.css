@@ -73,10 +73,6 @@
     padding-top: 15px;
 }
 
-.blog-post__likes {
-
-}
-
 .like-button img, .save-button img {
     width: 20px;
     height: 20px;
@@ -84,25 +80,16 @@
 
 }
 
-.like-button, .save-button {
-    background: none;
+
+.blog-post__save-btn {
+    background-color: #1976d2;
+    color: white;
     border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 20px;
     transition: background-color 0.3s;
-
-}
-
-.like-count {
-
-}
-
-.blog-post__save {
-
 }
 
 .blog-post__enlace {
@@ -112,6 +99,11 @@
     font-weight: 500;
     margin-top: 10px;
     transition: color 0.3s;
+}
 
+.icon-like{
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
 }
 

@@ -4,14 +4,12 @@ template.innerHTML = `
 
     <nav class="navbar-principal">
           <ul class="navbar-principal__menu">
-
             <li><a class="navbar-principal__link" href="#" id="home-btn">Inicio</a></li>
             <li><a class="navbar-principal__link" href="#" id="blog-btn">Blog</a></li>
             <li><a class="navbar-principal__link" href="#" id="contact-btn">Contáctame</a></li>
             <li><a class="navbar-principal__link" href="#" id="projects-btn">Proyectos</a></li>
             <li><a class="navbar-principal__link" href="#" id="about-btn">Acerca de mí</a></li>
           </ul>
-        </nav>
     </nav>
     <nav class="navbar-secundaria"> </nav>
     `
