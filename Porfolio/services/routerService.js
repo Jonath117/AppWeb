@@ -4,7 +4,7 @@ const Router = {
     blog: "blogs-page",
     contact: "contact-page",
     projects: "projects-page",
-    aboutMe: "about-me-page",
+    aboutMe: "about-page",
     savedblogs : "savedblogs-page",
   },
 
