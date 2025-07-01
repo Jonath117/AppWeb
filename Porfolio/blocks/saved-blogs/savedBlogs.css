@@ -39,3 +39,19 @@
     width: 100%;
     max-width: 1200px;
 }
+
+@media (max-width: 768px) {
+    .saved-blogs__container-saved {
+        flex-direction: column;
+        align-items: center;
+    }
+    .saved-blogs__search {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .saved-blogs__btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -107,3 +107,137 @@
     margin-right: 5px;
 }
 
+@media (max-width: 1200px) {
+    .blogs__titulo {
+        font-size: 2.2rem;
+        margin-top: 90px;
+    }
+
+    .blog-posts {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Las columnas pueden ser un poco más pequeñas */
+        gap: 25px;
+        padding: 0 15px; /* Reducir padding lateral */
+    }
+
+    .blog-post__imagen {
+        height: 180px; /* Ligeramente más pequeña */
+    }
+
+    .blog-post__contenido {
+        padding: 15px;
+    }
+
+    .blog-post__titulo {
+        font-size: 1.4em;
+    }
+
+    .blog-post__descripcion {
+        font-size: 0.95em;
+    }
+
+    .blog-post__save-btn {
+        padding: 8px 12px;
+        font-size: 0.95em;
+    }
+}
+
+/* Para pantallas de tablets (ej. entre 480px y 767px) */
+@media (max-width: 767px) {
+    .blogs__titulo {
+        font-size: 2rem;
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr; /* Una sola columna para un mejor flujo en tablets y móviles */
+        gap: 20px;
+        padding: 0 10px; /* Padding reducido para aprovechar el espacio */
+    }
+
+    .blog-post__imagen {
+        height: 220px; /* Podrían ser un poco más altas en modo vertical */
+    }
+
+    .blog-post__contenido {
+        padding: 15px;
+    }
+
+    .blog-post__titulo {
+        font-size: 1.3em;
+    }
+
+    .blog-post__fecha {
+        font-size: 0.85em;
+    }
+
+    .blog-post__descripcion {
+        font-size: 0.9em;
+    }
+
+    .icon-like {
+        width: 28px;
+        height: 28px;
+    }
+
+    .blog-post__save-btn {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Para pantallas de móviles (ej. hasta 479px) */
+@media (max-width: 479px) {
+    .blogs__titulo {
+        font-size: 1.8rem;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .blog-posts {
+        gap: 15px;
+        padding: 0 10px; /* Mínimo padding lateral */
+    }
+
+    .blog-post__imagen {
+        height: 180px; /* Ajuste para móviles más pequeños */
+    }
+
+    .blog-post__contenido {
+        padding: 12px;
+    }
+
+    .blog-post__titulo {
+        font-size: 1.2em;
+    }
+
+    .blog-post__descripcion {
+        font-size: 0.85em;
+        margin-bottom: 10px;
+    }
+
+    .blog-post__stats {
+        padding-top: 10px;
+        margin: 10px 0;
+    }
+
+    .icon-like {
+        width: 24px;
+        height: 24px;
+        margin-right: 3px;
+    }
+
+    .like-count {
+        font-size: 0.9em;
+    }
+
+    .blog-post__save-btn {
+        padding: 6px 8px;
+        font-size: 0.85em;
+    }
+
+    .blog-post__enlace {
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+}
